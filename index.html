@@ -33,9 +33,9 @@
         </div>
         <button type="button" class="site-header__menu-btn" id="menu-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="メニューを開く">
           <svg class="site-header__hamburger" width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <line x1="1" y1="1" x2="31" y2="1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="1" y1="12.5" x2="31" y2="12.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="1" y1="24" x2="31" y2="24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="1" y1="1" x2="31" y2="1" stroke="#68737A" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="1" y1="12.5" x2="31" y2="12.5" stroke="#68737A" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="1" y1="24" x2="31" y2="24" stroke="#68737A" stroke-width="2.5" stroke-linecap="round"/>
           </svg>
         </button>
       </div>
@@ -83,8 +83,19 @@
 
   <main>
     <section class="hero" aria-label="メインビジュアル">
-      <div class="hero__image-wrap">
-        <img src="assets/hero.jpg" alt="リノベーション後の明るいキッチンで食事をする家族" class="hero__image">
+      <div class="hero__image-wrap" id="hero-carousel">
+        <picture class="hero__image is-active">
+          <source media="(min-width: 1024px)" srcset="assets/hero-pc-1.png">
+          <img src="assets/hero-sp-1.png" alt="リノベーション後の明るいキッチンで食事をする家族">
+        </picture>
+        <picture class="hero__image">
+          <source media="(min-width: 1024px)" srcset="assets/hero-pc-2.png">
+          <img src="assets/hero-sp-2.png" alt="">
+        </picture>
+        <picture class="hero__image">
+          <source media="(min-width: 1024px)" srcset="assets/hero-pc-3.png">
+          <img src="assets/hero-sp-3.png" alt="">
+        </picture>
       </div>
       <div class="hero__copy">
         <p class="hero__line">“リノ”ベーションで、</p>

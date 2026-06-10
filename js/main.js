@@ -87,4 +87,15 @@
       closeMenu();
     }
   });
+
+  // Hero Carousel
+  var heroImages = document.querySelectorAll("#hero-carousel .hero__image");
+  if (heroImages.length > 1) {
+    var currentIndex = 0;
+    setInterval(function () {
+      heroImages[currentIndex].classList.remove("is-active");
+      currentIndex = (currentIndex + 1) % heroImages.length;
+      heroImages[currentIndex].classList.add("is-active");
+    }, 5000);
+  }
 })();
