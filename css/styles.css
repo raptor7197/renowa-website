@@ -1526,10 +1526,12 @@ body.menu-open .site-header__hamburger {
   /* Footer desktop */
   .site-footer {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
-    padding: 40px 277px;
+    padding: 60px 72px;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
 
   .site-footer__logo--pc {
@@ -1543,9 +1545,13 @@ body.menu-open .site-header__hamburger {
   }
 
   .site-footer__nav {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 24px;
+  }
+
+  .site-footer__nav .nav-divider {
+    display: block;
   }
 }
 
