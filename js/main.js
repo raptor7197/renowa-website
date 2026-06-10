@@ -7,6 +7,8 @@
     'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
   function openMenu() {
+    if (navOverlay.classList.contains("is-open")) return;
+
     document.body.classList.add("menu-open");
     navOverlay.classList.add("is-open");
     navOverlay.setAttribute("aria-hidden", "false");
@@ -16,13 +18,16 @@
     if (firstLink) firstLink.focus();
   }
 
-  function closeMenu() {
+  function closeMenu(options) {
+    if (!navOverlay.classList.contains("is-open")) return;
+
+    var shouldRestoreFocus = !options || options.restoreFocus !== false;
     document.body.classList.remove("menu-open");
     navOverlay.classList.remove("is-open");
     navOverlay.setAttribute("aria-hidden", "true");
     menuToggle.setAttribute("aria-expanded", "false");
     menuToggle.setAttribute("aria-label", "メニューを開く");
-    menuToggle.focus();
+    if (shouldRestoreFocus) menuToggle.focus();
   }
 
   function toggleMenu() {
@@ -67,7 +72,7 @@
       if (!target) return;
 
       e.preventDefault();
-      closeMenu();
+      closeMenu({ restoreFocus: false });
 
       var headerHeight = document.querySelector(".site-header").offsetHeight;
       var top =
@@ -78,6 +83,8 @@
   });
 
   navOverlay.addEventListener("click", function (e) {
-    if (e.target === navOverlay) closeMenu();
+    if (e.target === navOverlay || e.target.classList.contains("nav-overlay__bg")) {
+      closeMenu();
+    }
   });
 })();

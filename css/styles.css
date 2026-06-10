@@ -12,8 +12,10 @@
   --radius-card: 16px;
   --max-width: 1280px;
   --font-ja: "Noto Sans JP", sans-serif;
-  --font-en: "Source Sans 3", sans-serif;
+  --font-en: "Noto Sans JP", sans-serif;
   --gradient-title: linear-gradient(90deg, #2ba3d7 0%, #c8d800 100%);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-menu: cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 /* ===== Reset ===== */
@@ -88,11 +90,12 @@ button {
   font-size: 16px;
   letter-spacing: 0.04em;
   white-space: nowrap;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s var(--ease-out-soft), transform 0.2s var(--ease-out-soft);
 }
 
 .btn:hover {
   opacity: 0.85;
+  transform: translateY(-1px);
 }
 
 .btn--primary {
@@ -172,7 +175,7 @@ button {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(43, 163, 215, 0.35);
+  -webkit-text-stroke: 1px rgba(43, 163, 215, 0.35);
   paint-order: stroke fill;
 }
 
@@ -229,40 +232,29 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
   position: relative;
+  margin-right: -8px;
+  color: var(--color-text);
+  z-index: 10;
 }
 
 .site-header__hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 32px;
-  height: 18px;
-}
-
-.site-header__hamburger span {
   display: block;
-  height: 2px;
-  width: 100%;
-  background: var(--color-text);
-  border-radius: 1px;
+  width: 32px;
+  height: 25px;
+  overflow: visible;
+  transition: transform 0.28s var(--ease-menu), opacity 0.18s var(--ease-out-soft);
 }
 
-.site-header__menu-icon--close {
-  display: none;
-  font-size: 32px;
-  line-height: 1;
-  color: var(--color-text);
+.site-header__hamburger line {
+  stroke: currentColor;
 }
 
 body.menu-open .site-header__hamburger {
-  display: none;
-}
-
-body.menu-open .site-header__menu-icon--close {
-  display: block;
+  transform: rotate(90deg);
+  opacity: 0.7;
 }
 
 .site-header__nav {
@@ -279,7 +271,10 @@ body.menu-open .site-header__menu-icon--close {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  pointer-events: none;
+  transition:
+    opacity 0.36s var(--ease-menu),
+    visibility 0s linear 0.36s;
 }
 
 .nav-overlay__bg {
@@ -289,11 +284,21 @@ body.menu-open .site-header__menu-icon--close {
     linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
     url("../assets/hero.jpg") center / cover no-repeat;
   pointer-events: none;
+  transform: scale(1.04);
+  transition: transform 0.72s var(--ease-out-soft);
 }
 
 .nav-overlay.is-open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 0.36s var(--ease-menu),
+    visibility 0s;
+}
+
+.nav-overlay.is-open .nav-overlay__bg {
+  transform: scale(1);
 }
 
 .nav-overlay__inner {
@@ -306,6 +311,16 @@ body.menu-open .site-header__menu-icon--close {
   padding: 24px;
   width: 100%;
   max-width: 296px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.32s var(--ease-out-soft),
+    transform 0.42s var(--ease-out-soft);
+}
+
+.nav-overlay.is-open .nav-overlay__inner {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .nav-overlay__logo {
@@ -320,6 +335,34 @@ body.menu-open .site-header__menu-icon--close {
   gap: 12px;
   width: 100%;
 }
+
+.nav-overlay__nav .nav-link,
+.nav-overlay__divider,
+.nav-overlay__actions .btn,
+.nav-overlay__logo {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.34s var(--ease-out-soft),
+    transform 0.42s var(--ease-out-soft);
+}
+
+.nav-overlay.is-open .nav-overlay__logo,
+.nav-overlay.is-open .nav-overlay__nav .nav-link,
+.nav-overlay.is-open .nav-overlay__divider,
+.nav-overlay.is-open .nav-overlay__actions .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-overlay.is-open .nav-overlay__logo { transition-delay: 0.05s; }
+.nav-overlay.is-open .nav-overlay__nav .nav-link:nth-of-type(1) { transition-delay: 0.10s; }
+.nav-overlay.is-open .nav-overlay__nav .nav-link:nth-of-type(2) { transition-delay: 0.14s; }
+.nav-overlay.is-open .nav-overlay__nav .nav-link:nth-of-type(3) { transition-delay: 0.18s; }
+.nav-overlay.is-open .nav-overlay__nav .nav-link:nth-of-type(4) { transition-delay: 0.22s; }
+.nav-overlay.is-open .nav-overlay__nav .nav-link:nth-of-type(5) { transition-delay: 0.26s; }
+.nav-overlay.is-open .nav-overlay__actions .btn:nth-child(1) { transition-delay: 0.30s; }
+.nav-overlay.is-open .nav-overlay__actions .btn:nth-child(2) { transition-delay: 0.34s; }
 
 .nav-overlay__divider {
   display: block;
@@ -462,7 +505,7 @@ body.menu-open .site-header__menu-icon--close {
 /* ===== Greeting (代表挨拶) ===== */
 .greeting {
   position: relative;
-  padding: 40px 24px 60px;
+  padding: 28px 0 0;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
@@ -474,7 +517,8 @@ body.menu-open .site-header__menu-icon--close {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 6px;
+  min-height: 1400px;
 }
 
 .greeting__title {
@@ -482,11 +526,12 @@ body.menu-open .site-header__menu-icon--close {
   font-weight: 400;
   letter-spacing: 0.04em;
   writing-mode: horizontal-tb;
+  line-height: 1.3;
 }
 
 .greeting__divider {
   width: 100px;
-  height: auto;
+  height: 2px;
 }
 
 .greeting__images {
@@ -499,85 +544,93 @@ body.menu-open .site-header__menu-icon--close {
   position: absolute;
   border-radius: var(--radius-card);
   object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 58%, rgba(0, 0, 0, 0.88) 68%, transparent 82%);
+  mask-image: radial-gradient(ellipse at center, #000 58%, rgba(0, 0, 0, 0.88) 68%, transparent 82%);
 }
 
 .greeting__img--1 {
-  width: 237px;
-  height: 159px;
-  top: 189px;
-  left: -51px;
+  width: 200px;
+  height: auto;
+  top: 1100px;
+  left: -20px;
 }
 
 .greeting__img--2 {
-  width: 237px;
-  height: 158px;
-  top: 847px;
-  right: auto;
-  left: -63px;
+  width: 240px;
+  height: auto;
+  top: 850px;
+  right: -30px;
 }
 
 .greeting__img--3 {
-  width: 247px;
-  height: 179px;
-  top: 527px;
-  right: auto;
-  left: 197px;
+  width: 180px;
+  height: auto;
+  top: 180px;
+  left: -20px;
 }
 
 .greeting__img--4 {
-  width: 240px;
-  height: 174px;
-  bottom: auto;
-  top: 847px;
-  left: 197px;
+  width: 200px;
+  height: auto;
+  top: 550px;
+  right: -20px;
 }
 
 .greeting__content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 24px;
+  display: block;
   width: 100%;
-  max-width: 100%;
-  margin-top: 220px;
+  max-width: none;
+  margin: 0;
 }
 
 .greeting__group {
+  position: absolute;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 16px;
+  font-size: 17px;
   letter-spacing: 0.04em;
-  line-height: 1.6;
+  line-height: 1.68;
   display: flex;
   flex-direction: row;
-  gap: 8px;
-  justify-content: flex-end;
-  width: 100%;
+  gap: 12px;
+  width: auto;
 }
 
 .greeting__group p {
   margin: 0;
-  width: 20px;
+  white-space: nowrap;
 }
 
 .greeting__bottom {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 24px;
-  width: 100%;
+  display: contents;
 }
 
 .greeting__name {
+  position: absolute;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
+}
+
+.greeting__group--8 {
+  top: 100px;
+  right: 25px;
+}
+
+.greeting__group--5 {
+  top: 580px;
+  left: 25px;
+}
+
+.greeting__name {
+  top: 1000px;
+  right: 30px;
 }
 
 .greeting__role {
@@ -686,9 +739,8 @@ body.menu-open .site-header__menu-icon--close {
 .service__badge {
   position: relative;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  margin-right: -16px;
+  width: 32px;
+  height: 32px;
   z-index: 1;
 }
 
@@ -808,20 +860,20 @@ body.menu-open .site-header__menu-icon--close {
 
 .works__grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   align-items: center;
-  gap: 40px;
+  gap: 48px;
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
 }
 
 .works__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   width: 100%;
-  max-width: 360px;
+  max-width: 340px;
 }
 
 .works__img {
@@ -884,12 +936,13 @@ body.menu-open .site-header__menu-icon--close {
 .company__card {
   background: #fff;
   box-shadow: var(--shadow-service);
-  padding: 24px 16px;
-  width: calc(100% - 48px);
+  padding: 32px 20px;
+  width: calc(100% - 32px);
   max-width: 900px;
-  margin-top: -20px;
+  margin-top: -30px;
   position: relative;
   z-index: 1;
+  border-radius: var(--radius-card);
 }
 
 .company__table {
@@ -899,8 +952,8 @@ body.menu-open .site-header__menu-icon--close {
 .company__row {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 12px 20px;
+  gap: 12px;
+  padding: 16px 8px;
   border-bottom: 1px dashed var(--color-text);
 }
 
@@ -1153,55 +1206,65 @@ body.menu-open .site-header__menu-icon--close {
 
   /* Greeting desktop */
   .greeting {
-    padding: 80px 72px;
-    min-height: 795px;
+    padding: 96px 0 0;
+    min-height: 768px;
+    gap: 14px;
   }
 
   .greeting__title {
     font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .greeting__divider {
+    width: 100px;
+    height: 2px;
   }
 
   .greeting__img--1 {
-    width: 290px;
-    height: 194px;
-    top: 147px;
-    left: -17px;
+    width: 280px;
+    height: 185px;
+    top: 158px;
+    left: 0;
   }
 
   .greeting__img--2 {
-    width: 289px;
-    height: 193px;
-    bottom: auto;
-    top: 527px;
-    right: 60px;
+    width: 250px;
+    height: 168px;
+    top: 557px;
+    right: 122px;
     left: auto;
   }
 
   .greeting__img--3 {
-    width: 264px;
-    height: 176px;
-    top: 150px;
-    right: 0;
+    width: 185px;
+    height: 124px;
+    top: 161px;
+    right: 80px;
     left: auto;
   }
 
   .greeting__img--4 {
-    width: 285px;
-    height: 190px;
-    bottom: auto;
-    top: 564px;
-    left: 278px;
+    width: 215px;
+    height: 145px;
+    top: 577px;
+    left: 306px;
   }
 
   .greeting__content {
-    margin-top: 80px;
+    position: absolute;
+    top: 181px;
+    left: 306px;
+    right: 292px;
+    bottom: auto;
+    display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 64px;
-    max-width: 792px;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 48px;
+    max-width: none;
+    width: auto;
+    margin: 0;
   }
 
   .greeting__bottom {
@@ -1210,6 +1273,7 @@ body.menu-open .site-header__menu-icon--close {
 
   .greeting__name {
     order: 1;
+    margin-top: 197px;
   }
 
   .greeting__group--3 {
@@ -1225,10 +1289,40 @@ body.menu-open .site-header__menu-icon--close {
   }
 
   .greeting__group {
+    position: static;
     font-size: 20px;
-    gap: 16px;
+    line-height: 1.72;
+    gap: 13px;
     width: auto;
     justify-content: flex-start;
+  }
+
+  .greeting__name {
+    position: static;
+    top: auto;
+    right: auto;
+  }
+
+  .greeting__group--8,
+  .greeting__group--5,
+  .greeting__group--3 {
+    top: auto;
+    right: auto;
+    left: auto;
+  }
+
+  .greeting__group p {
+    width: 25px;
+  }
+
+  .greeting__role {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .greeting__person {
+    font-size: 20px;
+    line-height: 1.6;
   }
 
   /* Manager desktop */
@@ -1419,5 +1513,20 @@ body.menu-open .site-header__menu-icon--close {
     display: flex;
     align-items: center;
     gap: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
