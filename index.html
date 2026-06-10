@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社リノワ | RENOWA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <div class="site-header__top">
+        <a href="#top" class="site-header__logo site-header__logo--pc">
+          <img src="assets/logo-pc.png" alt="RENOWA 株式会社リノワ" width="120" height="75">
+        </a>
+        <a href="#top" class="site-header__logo site-header__logo--sp">
+          <img src="assets/logo-sp.png" alt="RENOWA 株式会社リノワ" width="148" height="32">
+        </a>
+        <div class="site-header__actions">
+          <button type="button" class="btn btn--primary btn--header">
+            <img src="assets/icon-mail.png" alt="" class="btn__icon" width="24" height="24">
+            <span>メールで問い合わせる</span>
+          </button>
+          <a href="tel:0365554881" class="btn btn--outline btn--header">
+            <img src="assets/icon-phone.png" alt="" class="btn__icon" width="24" height="24">
+            <span>電話で問い合わせる</span>
+          </a>
+        </div>
+        <button type="button" class="site-header__menu-btn" id="menu-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="メニューを開く">
+          <span class="site-header__hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="site-header__menu-icon site-header__menu-icon--close" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <nav class="site-header__nav" aria-label="メインナビゲーション">
+        <a href="#top" class="nav-link"><span class="nav-link__en">TOP</span><span class="nav-link__ja">トップ</span></a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a href="#about" class="nav-link"><span class="nav-link__en">ABOUT US</span><span class="nav-link__ja">私たち</span></a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a href="#service" class="nav-link"><span class="nav-link__en">SERVICE</span><span class="nav-link__ja">サービス例</span></a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a href="#works" class="nav-link"><span class="nav-link__en">WORKS</span><span class="nav-link__ja">施工実績</span></a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a href="#company" class="nav-link"><span class="nav-link__en">COMPANY</span><span class="nav-link__ja">会社概要</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <div class="nav-overlay__bg" aria-hidden="true"></div>
+    <div class="nav-overlay__inner">
+      <img src="assets/logo-pc.png" alt="" class="nav-overlay__logo" width="90" height="56">
+      <nav class="nav-overlay__nav" aria-label="モバイルナビゲーション">
+        <a href="#top" class="nav-link"><span class="nav-link__en">TOP</span><span class="nav-link__ja">トップ</span></a>
+        <span class="nav-overlay__divider" aria-hidden="true"></span>
+        <a href="#about" class="nav-link"><span class="nav-link__en">ABOUT US</span><span class="nav-link__ja">私たち</span></a>
+        <span class="nav-overlay__divider" aria-hidden="true"></span>
+        <a href="#service" class="nav-link"><span class="nav-link__en">SERVICE</span><span class="nav-link__ja">サービス例</span></a>
+        <span class="nav-overlay__divider" aria-hidden="true"></span>
+        <a href="#works" class="nav-link"><span class="nav-link__en">WORKS</span><span class="nav-link__ja">施工実績</span></a>
+        <span class="nav-overlay__divider" aria-hidden="true"></span>
+        <a href="#company" class="nav-link"><span class="nav-link__en">COMPANY</span><span class="nav-link__ja">会社概要</span></a>
+      </nav>
+      <div class="nav-overlay__actions">
+        <button type="button" class="btn btn--primary btn--full">
+          <img src="assets/icon-mail.png" alt="" class="btn__icon" width="24" height="24">
+          <span>メールで問い合わせる</span>
+        </button>
+        <a href="tel:0365554881" class="btn btn--outline btn--full">
+          <img src="assets/icon-phone.png" alt="" class="btn__icon" width="24" height="24">
+          <span>電話で問い合わせる</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" aria-label="メインビジュアル">
+      <div class="hero__image-wrap">
+        <img src="assets/hero.jpg" alt="リノベーション後の明るいキッチンで食事をする家族" class="hero__image">
+      </div>
+      <div class="hero__copy">
+        <p class="hero__line">“リノ”ベーションで、</p>
+        <p class="hero__line">人の“ワ”を。</p>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about__bg-lines" aria-hidden="true">
+        <img src="assets/bg-line-1.svg" alt="" class="about__bg-line about__bg-line--1">
+        <img src="assets/bg-line-2.svg" alt="" class="about__bg-line about__bg-line--2">
+      </div>
+      <div class="about__inner">
+        <div class="about__card">
+          <div class="section-title">
+            <h2 class="section-title__en section-title__en--gradient">ABOUT US</h2>
+            <p class="section-title__ja">私たちについて</p>
+          </div>
+          <div class="about__text">
+            <p>私たちは、「リノベーションで、人のワを」という想いを社名に込め、住まいに関わる幅広い工事を手掛ける地域密着型の会社です。</p>
+            <p>一般住宅のリフォームをはじめ、給湯器の設置・交換、住宅設備工事、内装・外装工事など、お客様の暮らしを支えるさまざまなサービスを提供しています。</p>
+            <p>私たちは、住まいづくりにおいて何よりも大切なのは「安心と信頼」だと考えています。そのため、確かな技術力による高品質な施工はもちろん、徹底した品質管理と安全管理を実践し、一つひとつの工事に責任を持って取り組んでいます。</p>
+            <p>お客様とのご縁を大切にしながら、快適で安心できる住環境づくりを通じて、人と人とのつながりを広げ、地域社会に貢献してまいります。</p>
+          </div>
+        </div>
+        <div class="about__photo">
+          <img src="assets/about.jpg" alt="リノワのスタッフ一同">
+        </div>
+      </div>
+    </section>
+
+    <section class="greeting section" aria-labelledby="greeting-title">
+      <h2 class="greeting__title" id="greeting-title">代表挨拶</h2>
+      <img src="assets/line-divider-h.svg" alt="" class="greeting__divider" aria-hidden="true">
+      <div class="greeting__images" aria-hidden="true">
+        <img src="assets/greeting-1.jpg" alt="" class="greeting__img greeting__img--1">
+        <img src="assets/greeting-2.jpg" alt="" class="greeting__img greeting__img--2">
+        <img src="assets/greeting-3.jpg" alt="" class="greeting__img greeting__img--3">
+        <img src="assets/greeting-4.jpg" alt="" class="greeting__img greeting__img--4">
+      </div>
+      <div class="greeting__content">
+        <div class="greeting__group greeting__group--8">
+          <p>何より大切にしてまいりました。</p>
+          <p>お客様との信頼関係を</p>
+          <p>真摯に向き合い、</p>
+          <p>だからこそ、一件一件のご依頼に</p>
+          <p>大切な「仕事」だと考えています。</p>
+          <p>お客様の暮らしをより良くするための</p>
+          <p>単なる「施工」ではなく、</p>
+          <p>弊社は、住まいに関する工事を</p>
+        </div>
+        <div class="greeting__group greeting__group--5">
+          <p>それが私たちの願いです。</p>
+          <p>地域とのご縁を広げていきたい。</p>
+          <p>人と人とのつながりや</p>
+          <p>住まいを整えるだけでなく、</p>
+          <p>お客様への施工を通じて、</p>
+        </div>
+        <div class="greeting__bottom">
+          <div class="greeting__name">
+            <p class="greeting__role">代表取締役</p>
+            <p class="greeting__person">長田 知也</p>
+          </div>
+          <div class="greeting__group greeting__group--3">
+            <p>日々目指してまいります。</p>
+            <p>お客様から選ばれ続ける会社を</p>
+            <p>これからも誠実な仕事を積み重ね、</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manager section" aria-labelledby="manager-title">
+      <img src="assets/bg-line-manager.svg" alt="" class="manager__bg-line" aria-hidden="true">
+      <div class="manager__inner">
+        <h2 class="manager__title" id="manager-title">施工管理責任者メッセージ</h2>
+        <div class="manager__photo">
+          <img src="assets/manager.jpg" alt="施工管理責任者のポートレート">
+        </div>
+        <div class="manager__text">
+          <div class="manager__body">
+            <p>お客様にとってリフォームは、住まいをより快適にし、これからの暮らしを豊かにする大切な機会です。私たちは常にお客様の満足度を第一に考え、一人ひとりのご要望やお悩みに真摯に向き合いながら、最適なご提案を心掛けています。</p>
+            <p>住まいに関するニーズはお客様ごとに異なります。そのため、しっかりとお話を伺い、それぞれのニーズに応える施工を実現することを大切にしています。また、工事中は安全管理を徹底し、細部まで妥協しない丁寧な作業を行うことで、高品質な仕上がりをお届けいたします。</p>
+            <p>工事が完了したときの「ありがとう」の言葉は、私たちにとって何よりの励みです。そして、「また仕事を任せたいと思える会社だった」と感じていただけるよう、施工後のアフターフォローまで責任を持って対応いたします。<br>株式会社リノワは、これからも地域の皆様に信頼されるパートナーとして、誠実な仕事を積み重ねてまいります</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service section" id="service" aria-labelledby="service-title">
+      <div class="section-title section-title--center">
+        <h2 class="section-title__en section-title__en--gradient" id="service-title">SERVICE</h2>
+        <p class="section-title__ja">サービス例</p>
+      </div>
+      <div class="service__grid">
+        <article class="service__item">
+          <div class="service__label"><span class="service__badge"><img src="assets/service-badge.png" alt="" width="32" height="32"><span class="service__num">1</span></span><span class="service__name">エアコン取り外し/設置</span></div>
+          <img src="assets/service-1.jpg" alt="エアコンの取り外し・設置工事" class="service__img">
+        </article>
+        <article class="service__item">
+          <div class="service__label"><span class="service__badge"><img src="assets/service-badge.png" alt="" width="32" height="32"><span class="service__num">2</span></span><span class="service__name">キッチン各種リフォーム/修理</span></div>
+          <img src="assets/service-2.jpg" alt="キッチンのリフォーム" class="service__img">
+        </article>
+        <article class="service__item">
+          <div class="service__label"><span class="service__badge"><img src="assets/service-badge.png" alt="" width="32" height="32"><span class="service__num">3</span></span><span class="service__name">お風呂のリフォーム</span></div>
+          <img src="assets/service-3.jpg" alt="お風呂のリフォーム" class="service__img">
+        </article>
+        <article class="service__item">
+          <div class="service__label"><span class="service__badge"><img src="assets/service-badge.png" alt="" width="32" height="32"><span class="service__num">4</span></span><span class="service__name">トイレのリフォーム</span></div>
+          <img src="assets/service-4.jpg" alt="トイレのリフォーム" class="service__img">
+        </article>
+        <article class="service__item">
+          <div class="service__label"><span class="service__badge"><img src="assets/service-badge.png" alt="" width="32" height="32"><span class="service__num">5</span></span><span class="service__name">エコキュート/給湯器工事</span></div>
+          <img src="assets/service-5.jpg" alt="エコキュート・給湯器工事" class="service__img service__img--crop">
+        </article>
+        <article class="service__item">
+          <div class="service__label"><span class="service__badge"><img src="assets/service-badge.png" alt="" width="32" height="32"><span class="service__num">6</span></span><span class="service__name">外壁（サイディング）工事</span></div>
+          <img src="assets/service-6.jpg" alt="外壁サイディング工事" class="service__img">
+        </article>
+      </div>
+      <p class="service__note">その他、住まいのお困りごとがあればお気軽にご相談ください！</p>
+    </section>
+
+    <section class="voice section" id="voice" aria-labelledby="voice-title">
+      <div class="section-title section-title--center">
+        <h2 class="section-title__en section-title__en--gradient section-title__en--voice" id="voice-title">VOICE</h2>
+        <p class="section-title__ja">お客様の声</p>
+      </div>
+      <div class="voice__card">
+        <div class="voice__photo-wrap">
+          <img src="assets/voice.jpg" alt="お客様 田中 新也 氏" class="voice__photo voice__photo--crop">
+          <p class="voice__caption">社会福祉法人 イースト・ロード福祉会<br>副施設長 / 田中 新也 氏</p>
+        </div>
+        <div class="voice__text">
+          <p>リノワさんには、蛇口の付け替えのような細かなことから施設全体の給湯器の入れ替えまで、幅広い工事をお願いしています。</p>
+          <p>小さな仕事でも<strong>顧客に寄り添ってくれる</strong>ところや、何か困ったことを相談すれば<strong>必ず解決方法を提示してくれる</strong>ので、弊施設にはなくてはならない存在です。</p>
+          <p>これからも、良きパートナーとしてお付き合いしていきたいです。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="works section" id="works" aria-labelledby="works-title">
+      <div class="section-title section-title--center">
+        <h2 class="section-title__en section-title__en--gradient" id="works-title">WORKS</h2>
+        <p class="section-title__ja">施工実績</p>
+      </div>
+      <div class="works__grid">
+        <article class="works__item">
+          <img src="assets/works-1.jpg" alt="介護施設のカーテンレール取り替え工事" class="works__img">
+          <img src="assets/line-works.svg" alt="" class="works__divider" aria-hidden="true">
+          <h3 class="works__title">介護施設の<br>カーテンレール<br>取り替え工事</h3>
+        </article>
+        <article class="works__item">
+          <img src="assets/works-2.jpg" alt="玄関ドアドアクローザー取り替え工事" class="works__img">
+          <img src="assets/line-works.svg" alt="" class="works__divider" aria-hidden="true">
+          <h3 class="works__title">玄関ドア<br>ドアクローザー<br>取り替え工事</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="company section" id="company" aria-labelledby="company-title">
+      <div class="company__header">
+        <img src="assets/company-header.jpg" alt="" class="company__header-bg" aria-hidden="true">
+        <div class="company__header-overlay" aria-hidden="true"></div>
+        <div class="section-title section-title--center">
+          <h2 class="section-title__en section-title__en--light" id="company-title">COMPANY</h2>
+          <p class="section-title__ja">会社概要</p>
+        </div>
+      </div>
+      <div class="company__card">
+        <dl class="company__table">
+          <div class="company__row">
+            <dt>会社名</dt>
+            <dd>株式会社リノワ（RENOWA,inc.）</dd>
+          </div>
+          <div class="company__row">
+            <dt>設立年月日</dt>
+            <dd>2019年4月1日（2026年6月1日業態及び社名変更）</dd>
+          </div>
+          <div class="company__row">
+            <dt>所在地</dt>
+            <dd>〒101-0047<br>東京都千代田区内神田1-15-2　神田オーシャンビル</dd>
+          </div>
+          <div class="company__row">
+            <dt>主な対応エリア</dt>
+            <dd>大阪を中心とした京都府・奈良県・兵庫県<br>（その他、ご要望に応じて全国各地対応可）</dd>
+          </div>
+          <div class="company__row">
+            <dt>TEL</dt>
+            <dd><a href="tel:0365554881">03-6555-4881</a></dd>
+          </div>
+          <div class="company__row company__row--last">
+            <dt>所有資格</dt>
+            <dd>第二種電気工事士<br>給水装置工事主任技術者<br>ガス機器設置スペシャリスト<br>小型車両系建設機器（整地,運搬,積み込み用及び掘削用）運転特別教育</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <img src="assets/contact-house.svg" alt="" class="contact__house" aria-hidden="true">
+      <div class="contact__inner">
+        <div class="section-title section-title--center">
+          <h2 class="section-title__en section-title__en--gradient" id="contact-title">CONTACT</h2>
+          <p class="section-title__ja">お問い合わせ</p>
+        </div>
+        <p class="contact__intro">ご依頼・ご相談はこちらからお気軽にお問い合わせください。</p>
+        <div class="contact__actions">
+          <button type="button" class="btn btn--primary btn--contact">
+            <img src="assets/icon-mail.png" alt="" class="btn__icon" width="32" height="32">
+            <span>メールで問い合わせる</span>
+          </button>
+          <a href="tel:0365554881" class="btn btn--outline btn--contact">
+            <img src="assets/icon-phone.png" alt="" class="btn__icon" width="32" height="32">
+            <span>電話で問い合わせる</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/logo-pc.png" alt="RENOWA" class="site-footer__logo site-footer__logo--pc" width="120" height="75">
+    <img src="assets/logo-sp.png" alt="RENOWA" class="site-footer__logo site-footer__logo--sp" width="148" height="32">
+    <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+      <a href="#top" class="nav-link"><span class="nav-link__en">TOP</span><span class="nav-link__ja">トップ</span></a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a href="#about" class="nav-link"><span class="nav-link__en">ABOUT US</span><span class="nav-link__ja">私たち</span></a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a href="#service" class="nav-link"><span class="nav-link__en">SERVICE</span><span class="nav-link__ja">サービス例</span></a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a href="#works" class="nav-link"><span class="nav-link__en">WORKS</span><span class="nav-link__ja">施工実績</span></a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a href="#company" class="nav-link"><span class="nav-link__en">COMPANY</span><span class="nav-link__ja">会社概要</span></a>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

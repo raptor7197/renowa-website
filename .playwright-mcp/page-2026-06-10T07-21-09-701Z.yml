@@ -1,0 +1,186 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "RENOWA 株式会社リノワ" [ref=e5] [cursor=pointer]:
+        - /url: "#top"
+        - img "RENOWA 株式会社リノワ" [ref=e6]
+      - button "メニューを開く" [ref=e7] [cursor=pointer]
+  - main [ref=e12]:
+    - region "メインビジュアル" [ref=e13]:
+      - img "リノベーション後の明るいキッチンで食事をする家族" [ref=e15]
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: “リノ”ベーションで、
+        - paragraph [ref=e18]: 人の“ワ”を。
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - heading "ABOUT US" [level=2] [ref=e23]
+          - paragraph [ref=e24]: 私たちについて
+        - generic [ref=e25]:
+          - paragraph [ref=e26]: 私たちは、「リノベーションで、人のワを」という想いを社名に込め、住まいに関わる幅広い工事を手掛ける地域密着型の会社です。
+          - paragraph [ref=e27]: 一般住宅のリフォームをはじめ、給湯器の設置・交換、住宅設備工事、内装・外装工事など、お客様の暮らしを支えるさまざまなサービスを提供しています。
+          - paragraph [ref=e28]: 私たちは、住まいづくりにおいて何よりも大切なのは「安心と信頼」だと考えています。そのため、確かな技術力による高品質な施工はもちろん、徹底した品質管理と安全管理を実践し、一つひとつの工事に責任を持って取り組んでいます。
+          - paragraph [ref=e29]: お客様とのご縁を大切にしながら、快適で安心できる住環境づくりを通じて、人と人とのつながりを広げ、地域社会に貢献してまいります。
+      - img "リノワのスタッフ一同" [ref=e31]
+    - region "代表挨拶" [ref=e32]:
+      - heading "代表挨拶" [level=2] [ref=e33]
+      - img [ref=e34]
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - paragraph [ref=e37]: 何より大切にしてまいりました。
+          - paragraph [ref=e38]: お客様との信頼関係を
+          - paragraph [ref=e39]: 真摯に向き合い、
+          - paragraph [ref=e40]: だからこそ、一件一件のご依頼に
+          - paragraph [ref=e41]: 大切な「仕事」だと考えています。
+          - paragraph [ref=e42]: お客様の暮らしをより良くするための
+          - paragraph [ref=e43]: 単なる「施工」ではなく、
+          - paragraph [ref=e44]: 弊社は、住まいに関する工事を
+        - generic [ref=e45]:
+          - paragraph [ref=e46]: それが私たちの願いです。
+          - paragraph [ref=e47]: 地域とのご縁を広げていきたい。
+          - paragraph [ref=e48]: 人と人とのつながりや
+          - paragraph [ref=e49]: 住まいを整えるだけでなく、
+          - paragraph [ref=e50]: お客様への施工を通じて、
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - paragraph [ref=e53]: 代表取締役
+            - paragraph [ref=e54]: 長田 知也
+          - generic [ref=e55]:
+            - paragraph [ref=e56]: 日々目指してまいります。
+            - paragraph [ref=e57]: お客様から選ばれ続ける会社を
+            - paragraph [ref=e58]: これからも誠実な仕事を積み重ね、
+    - region "施工管理責任者メッセージ" [ref=e59]:
+      - img
+      - generic [ref=e60]:
+        - heading "施工管理責任者メッセージ" [level=2] [ref=e61]
+        - img "施工管理責任者のポートレート" [ref=e63]
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: お客様にとってリフォームは、住まいをより快適にし、これからの暮らしを豊かにする大切な機会です。私たちは常にお客様の満足度を第一に考え、一人ひとりのご要望やお悩みに真摯に向き合いながら、最適なご提案を心掛けています。
+          - paragraph [ref=e67]: 住まいに関するニーズはお客様ごとに異なります。そのため、しっかりとお話を伺い、それぞれのニーズに応える施工を実現することを大切にしています。また、工事中は安全管理を徹底し、細部まで妥協しない丁寧な作業を行うことで、高品質な仕上がりをお届けいたします。
+          - paragraph [ref=e68]:
+            - text: 工事が完了したときの「ありがとう」の言葉は、私たちにとって何よりの励みです。そして、「また仕事を任せたいと思える会社だった」と感じていただけるよう、施工後のアフターフォローまで責任を持って対応いたします。
+            - text: 株式会社リノワは、これからも地域の皆様に信頼されるパートナーとして、誠実な仕事を積み重ねてまいります
+    - region "SERVICE" [ref=e69]:
+      - generic [ref=e70]:
+        - heading "SERVICE" [level=2] [ref=e71]
+        - paragraph [ref=e72]: サービス例
+      - generic [ref=e73]:
+        - article [ref=e74]:
+          - generic [ref=e75]:
+            - generic [ref=e77]: "1"
+            - generic [ref=e78]: エアコン取り外し/設置
+          - img "エアコンの取り外し・設置工事" [ref=e79]
+        - article [ref=e80]:
+          - generic [ref=e81]:
+            - generic [ref=e83]: "2"
+            - generic [ref=e84]: キッチン各種リフォーム/修理
+          - img "キッチンのリフォーム" [ref=e85]
+        - article [ref=e86]:
+          - generic [ref=e87]:
+            - generic [ref=e89]: "3"
+            - generic [ref=e90]: お風呂のリフォーム
+          - img "お風呂のリフォーム" [ref=e91]
+        - article [ref=e92]:
+          - generic [ref=e93]:
+            - generic [ref=e95]: "4"
+            - generic [ref=e96]: トイレのリフォーム
+          - img "トイレのリフォーム" [ref=e97]
+        - article [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e101]: "5"
+            - generic [ref=e102]: エコキュート/給湯器工事
+          - img "エコキュート・給湯器工事" [ref=e103]
+        - article [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e107]: "6"
+            - generic [ref=e108]: 外壁（サイディング）工事
+          - img "外壁サイディング工事" [ref=e109]
+      - paragraph [ref=e110]: その他、住まいのお困りごとがあればお気軽にご相談ください！
+    - region "VOICE" [ref=e111]:
+      - generic [ref=e112]:
+        - heading "VOICE" [level=2] [ref=e113]
+        - paragraph [ref=e114]: お客様の声
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - img "お客様 田中 新也 氏" [ref=e117]
+          - paragraph [ref=e118]:
+            - text: 社会福祉法人 イースト・ロード福祉会
+            - text: 副施設長 / 田中 新也 氏
+        - generic [ref=e119]:
+          - paragraph [ref=e120]: リノワさんには、蛇口の付け替えのような細かなことから施設全体の給湯器の入れ替えまで、幅広い工事をお願いしています。
+          - paragraph [ref=e121]:
+            - text: 小さな仕事でも
+            - strong [ref=e122]: 顧客に寄り添ってくれる
+            - text: ところや、何か困ったことを相談すれば
+            - strong [ref=e123]: 必ず解決方法を提示してくれる
+            - text: ので、弊施設にはなくてはならない存在です。
+          - paragraph [ref=e124]: これからも、良きパートナーとしてお付き合いしていきたいです。
+    - region "WORKS" [ref=e125]:
+      - generic [ref=e126]:
+        - heading "WORKS" [level=2] [ref=e127]
+        - paragraph [ref=e128]: 施工実績
+      - generic [ref=e129]:
+        - article [ref=e130]:
+          - img "介護施設のカーテンレール取り替え工事" [ref=e131]
+          - img [ref=e132]
+          - heading "介護施設の カーテンレール 取り替え工事" [level=3] [ref=e133]:
+            - text: 介護施設の
+            - text: カーテンレール
+            - text: 取り替え工事
+        - article [ref=e134]:
+          - img "玄関ドアドアクローザー取り替え工事" [ref=e135]
+          - img [ref=e136]
+          - heading "玄関ドア ドアクローザー 取り替え工事" [level=3] [ref=e137]:
+            - text: 玄関ドア
+            - text: ドアクローザー
+            - text: 取り替え工事
+    - region "COMPANY" [ref=e138]:
+      - generic [ref=e139]:
+        - img [ref=e140]
+        - generic [ref=e142]:
+          - heading "COMPANY" [level=2] [ref=e143]
+          - paragraph [ref=e144]: 会社概要
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - term [ref=e148]: 会社名
+          - definition [ref=e149]: 株式会社リノワ（RENOWA,inc.）
+        - generic [ref=e150]:
+          - term [ref=e151]: 設立年月日
+          - definition [ref=e152]: 2019年4月1日（2026年6月1日業態及び社名変更）
+        - generic [ref=e153]:
+          - term [ref=e154]: 所在地
+          - definition [ref=e155]:
+            - text: 〒101-0047
+            - text: 東京都千代田区内神田1-15-2 神田オーシャンビル
+        - generic [ref=e156]:
+          - term [ref=e157]: 主な対応エリア
+          - definition [ref=e158]:
+            - text: 大阪を中心とした京都府・奈良県・兵庫県
+            - text: （その他、ご要望に応じて全国各地対応可）
+        - generic [ref=e159]:
+          - term [ref=e160]: TEL
+          - definition [ref=e161]:
+            - link "03-6555-4881" [ref=e162] [cursor=pointer]:
+              - /url: tel:0365554881
+        - generic [ref=e163]:
+          - term [ref=e164]: 所有資格
+          - definition [ref=e165]:
+            - text: 第二種電気工事士
+            - text: 給水装置工事主任技術者
+            - text: ガス機器設置スペシャリスト
+            - text: 小型車両系建設機器（整地,運搬,積み込み用及び掘削用）運転特別教育
+    - region "CONTACT" [ref=e166]:
+      - img
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - heading "CONTACT" [level=2] [ref=e169]
+          - paragraph [ref=e170]: お問い合わせ
+        - paragraph [ref=e171]: ご依頼・ご相談はこちらからお気軽にお問い合わせください。
+        - generic [ref=e172]:
+          - button "メールで問い合わせる" [ref=e173] [cursor=pointer]:
+            - generic [ref=e174]: メールで問い合わせる
+          - link "電話で問い合わせる" [ref=e175] [cursor=pointer]:
+            - /url: tel:0365554881
+            - generic [ref=e176]: 電話で問い合わせる
+  - contentinfo [ref=e177]:
+    - img "RENOWA" [ref=e178]
